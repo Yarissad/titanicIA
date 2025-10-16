@@ -233,7 +233,16 @@ with tab1:
             )
         ])
         fig_sex.update_layout(height=450, margin=dict(l=0, r=0, t=0, b=0))
-        st.plotly_chart(fig_sex, width=100, use_container_width=True)
+        st.plotly_chart(
+    fig_sex,
+    use_container_width=True,
+    config={
+        "displaylogo": False,
+        "displayModeBar": True,
+        "modeBarButtonsToRemove": ["pan2d", "lasso2d"]
+    }
+)
+
         
         st.info(f"""
         **Análisis de Género:**
